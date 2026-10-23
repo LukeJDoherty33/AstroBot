@@ -194,7 +194,7 @@ def main():
     rooms = get_rooms(token)
 
     if not rooms:
-        print(#complete the print statement )
+        print("No Webex rooms found. Make sure bot has joined a space.")
         return
 
     print_rooms(rooms)
