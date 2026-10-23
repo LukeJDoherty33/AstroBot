@@ -99,7 +99,7 @@ def send_message(token, room_id, message):
 # =========================
 def get_city_coordinates(city, api_key):
     url = https://api.openweathermap.org/geo/1.0/direct
-    params = {"c": city, "limit": 1, "appid": api_key}
+    params = {"q": city, "limit": 1, "appid": api_key}
     response = requests.get(url, params=params)
 
     if response.status_code != 200:
