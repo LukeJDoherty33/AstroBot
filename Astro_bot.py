@@ -212,7 +212,7 @@ def main():
 
             print(f"Received message: {message_text}")
 
-            if not message_text.startswith(#complete):
+            if not message_text.startswith("/"):
                 continue
 
             if message_text.lower() == "/help":
