@@ -86,6 +86,7 @@ This investigation sheet helps you gather key technical information from the thr
   "weather": [
     {
       "main": "Clouds"
+      "description": "scattered clouds"
     }
   ],
   "wind": {
