@@ -85,11 +85,11 @@ This investigation sheet helps you gather key technical information from the thr
   },
   "weather": [
     {
-      "main": "clouds",
+      "main": "Clouds"
     }
-    "wind": {
-      "speed": 4.2
-    }
+  ],
+  "wind": {
+    "speed": 4.2
   }
 ---
 
