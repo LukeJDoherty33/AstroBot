@@ -155,15 +155,21 @@ My bot requires Webex access token and OpenWeather API key to which i dont share
 
 Explain how REST APIs are used in your AstroBot: 
 
-- Describe how HTTP methods (GET, POST) are used  
-- Explain how your bot interacts with APIs (Webex, Weather, ISS, Geocoding)  
-- Describe how JSON responses are received and processed  
+- Describe how HTTP methods (GET, POST) are used.
+the GET method is used to request to retrieve information from a certain API. the post method is used so the bot can reply to the user.
+- Explain how your bot interacts with APIs (Webex, Weather, ISS, Geocoding)
+the bot uses GET and POST to gain infromation such as messages for Webex, weather information from OpenWeather API , current latitude and longitude from thje Open Notify API. 
+- Describe how JSON responses are received and processed
+the code data = response.json() converts the JSON response into a pyhton string
 
 Note: Relate your explanation directly to your code for higher grade. 
 
 #### Security Considerations: (2 marks)
 - Check response status codes, Handling invalid or unexpected API responses, Avoiding excessive API calls
-
+if response.status_code != 200:
+    return "Unable to retrieve weather data." this line of code basically mean if the API displays a different number, the bot will display an error message.
+if not location:
+    return "City not found." if the coordinates are not correlated to a city the function returns none.
 ---
 
 ###  MVC Design Pattern in AstroBot (3 Marks)
