@@ -136,10 +136,13 @@ In this section, evaluate how web technologies, architecture, and design pattern
 
 Explain how the client–server model applies to your AstroBot:
 
-- Identify the **client** 
-- Identify the **server(s)** 
+- Identify the **client**
+the client is the python application, which runs using python idle and user interact with the bot by using certain commands through Webex
+- Identify the **server(s)**
+Webex API, OpenWeather API, Open Notify API
 - Describe how data flows between:
   - User, AstroBot and APIs
+when a user sends a command such as /weather london in Webex the astro bot uses request.get to retrieve data from the Webex API to which the bot sends a request to OpenWeather geocoding to find london lat and long, which uses those measurements to request weather information from the OpenWeather API. The data is return to the bot as a json, then uises request.post to send the information for the user to read
 
 Include a **simple block diagram** to illustrate this interaction.
 
