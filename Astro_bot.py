@@ -37,7 +37,7 @@ def get_api_key(prompt, hardcoded_key):
 # WEBEX FUNCTIONS
 # =========================
 def get_rooms(token):
-    url = "https;//webexapis.com/v1/rooms"
+    url = "https://webexapis.com/v1/rooms"
     headers = {"Authorization": token}
     response = requests.get(url, headers=headers)
 
