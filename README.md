@@ -173,9 +173,9 @@ Provide a short example based on your implementation
 
 | Component   | Description and Example (Relate to your Bot) |
 |------------|----------------------------------|
-| **Model**  |  |
-| **View**   |  |
-| **Controller** |  |
+| **Model**  | The Model handles retrieving and processing data. My Astro Bot uses, the get_weather(), get_city_coordinates() and get_iss_location() to retrieve information from APIs|
+| **View**   | The View presents information to the user. my Astro Bot uses, the send_message() function to send information to the user through Webex |
+| **Controller** | The Controller handles user commands. my Astro Bot uses, the main() function checks messages for commands such as /weather |
 
 ---
 
