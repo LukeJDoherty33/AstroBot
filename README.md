@@ -189,12 +189,16 @@ Provide a short example based on your implementation
 
 Reflect on your AstroBot (400 words):
 
-- How effective is your bot in meeting the Astronomy Club’s needs?  
-- What design decisions worked well?  
-- What challenges did you face when integrating APIs?  
-- What security risks did you identify and how were they handled?  
+- How effective is your bot in meeting the Astronomy Club’s needs?
+the bot meets astronomy clubs needs as it provides valuable information, to which is accessable through a simple command. as for example the /weather command allows members to check weather in specific cities which can help the team plan activities  
+- What design decisions worked well?
+For example, get_city_coordinates() retrieves geographical coordinates, while get_weather() retrieves weather information. using separate python functions worked well as it allowed for easier maintance and understanding of the code
+- What challenges did you face when integrating APIs?
+one challenge was understanding how geocoding converts city names into coordinates, another challenge was understanding how different APIs communicate with Python. I also needed to understand JSON responses and how to extract values such as temperature, humidity, latitude and longitude.
+- What security risks did you identify and how were they handled?
+one risk is that exposing API keys and access tokens could allow unauthorised access to external services. another thing to avoid is uploading credentials to GitHub.
 - How could your solution be improved in the future?  
-
+in the future i can improve by adding an astronomy features and introduce better error handling
 ---
 
  **Tip:** Link your answers directly to your code and examples for higher marks.
