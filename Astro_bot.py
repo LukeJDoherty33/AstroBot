@@ -50,7 +50,7 @@ def get_rooms(token):
 
 def print_rooms(rooms):
     for room in rooms:
-        print(#complete the print statement to display the room title and id)
+        print(f"{room['title']} - {room['id']}")
 
 
 def select_room(rooms):
