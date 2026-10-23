@@ -148,7 +148,7 @@ Include a **simple block diagram** to illustrate this interaction.
 
 ####  Security Considerations: (3 marks )
 - Consider but not limiting to secure handling of API keys and tokens, API rate limiting, and Input validation (e.g., handling user commands safely), include examples from code where necessary to illustrate.
-
+My bot requires Webex access token and OpenWeather API key to which i dont share the credentials so authorised access to the services are accessable.
 ---
 
 ###  RESTful API Usage in Your Application (3 marks )
