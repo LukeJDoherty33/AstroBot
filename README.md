@@ -26,7 +26,7 @@ This investigation sheet helps you gather key technical information from the thr
 | Criteria | Details |
 |---------|---------|
 | API Base URL | `https://api.open-notify.org` |
-| Endpoint for current ISS location | `//iss-now.json` |
+| Endpoint for current ISS location | `/iss-now.json` |
 | Sample response format (example JSON) |  
 ```
 ```
@@ -37,6 +37,7 @@ This investigation sheet helps you gather key technical information from the thr
     "latitude": "40.7128",
     "longitude": "-74.0060"
   }
+  }
 ---
 
 ##  Geocoding API (4 marks)
@@ -45,7 +46,7 @@ This investigation sheet helps you gather key technical information from the thr
 |---------|---------|
 | Provider used (Choose one) | **LocationIQ / Mapbox/ OpenWeatherMap other -provide detail** |
 | API Base URL | `https://api.openweathermap.org/geo/1.0` |
-| Endpoint for geocoding | `/driect` |
+| Endpoint for geocoding | `/direct` |
 | Endpoint for reverse geocoding | `/reverse` |
 | Authentication method | `API KEY` |
 | Required query parameters | `Geocoding: q, appid; Reverse geocoding: lat, lon, appid. Optional: limit` |
@@ -69,7 +70,7 @@ This investigation sheet helps you gather key technical information from the thr
 | Criteria | Details |
 |---------|---------|
 | API Provider (Choose one) | **OpenWeather, OpenWeatherMap (or other – provide details)** |
-| API Base URL | `https://api:openweathermap.org/data/2.5` |
+| API Base URL | `https://api.openweathermap.org/data/2.5` |
 | Endpoint for current weather | `/weather` |
 | Authentication method | `API KEY` |
 | Required query parameters | `q(city name), appid (API key), Optional:units=metric` |
@@ -85,7 +86,7 @@ This investigation sheet helps you gather key technical information from the thr
   },
   "weather": [
     {
-      "main": "Clouds"
+      "main": "Clouds",
       "description": "scattered clouds"
     }
   ],
@@ -98,7 +99,7 @@ This investigation sheet helps you gather key technical information from the thr
 
 | Criteria | Details |
 |---------|---------|
-| Library used | `_______________________________` |
+| Library used | `datetime` |
 | Function used to convert epoch | `_______________________________` |
 | Sample code to convert timestamp |  
 ```  
