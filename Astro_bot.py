@@ -222,7 +222,7 @@ def main():
                     "/weather <city>\n/iss\n/help\n/quit"
                 )
 
-            elif message_text.lower().startswith(#complete):
+            elif message_text.lower().startswith("/"):
 
                 parts = message_text.split(maxsplit=1)
 
