@@ -100,12 +100,12 @@ This investigation sheet helps you gather key technical information from the thr
 | Criteria | Details |
 |---------|---------|
 | Library used | `datetime` |
-| Function used to convert epoch | `_______________________________` |
+| Function used to convert epoch | `datetime.fromtimestamp()` |
 | Sample code to convert timestamp |  
 ```  
 ```
 |
-| Output (human-readable time) | `_______________________________` |
+| Output (human-readable time) | `2024-10-21 11:20:00 UTC` |
 
 ---
 
