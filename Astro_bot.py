@@ -210,7 +210,7 @@ def main():
 
             last_message_id = message_id
 
-            print(#complete the print statement to display the received message text)
+            print(f"Received message: {message_text}")
 
             if not message_text.startswith(#complete):
                 continue
