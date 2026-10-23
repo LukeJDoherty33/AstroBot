@@ -11,13 +11,13 @@ This investigation sheet helps you gather key technical information from the thr
 
 | Criteria | Details |
 |---------|---------|
-| API Base URL | `_______________________________` |
-| Authentication Method | `_______________________________` |
-| Endpoint to list rooms | `_______________________________` |
-| Endpoint to get messages | `_______________________________` |
-| Endpoint to send message | `_______________________________` |
-| Required headers | `_______________________________` |
-| Sample full GET or POST request | `_______________________________` |
+| API Base URL | `https://webexapis.com/v1` |
+| Authentication Method | `Bearer  Token` |
+| Endpoint to list rooms | `GET /rooms` |
+| Endpoint to get messages | `GET /messages` |
+| Endpoint to send message | `POST /messages` |
+| Required headers | `Authorization: Bearer YOUR_ACCESS_TOKEN | Content-Type: application/json` |
+| Sample full GET or POST request | `GET https://webexapis.com/v1/messages?roomId=YOUR_ROOM_ID` |
 
 ---
 
@@ -25,14 +25,18 @@ This investigation sheet helps you gather key technical information from the thr
 
 | Criteria | Details |
 |---------|---------|
-| API Base URL | `_______________________________` |
-| Endpoint for current ISS location | `_______________________________` |
+| API Base URL | `https://api.open-notify.org` |
+| Endpoint for current ISS location | `//iss-now.json` |
 | Sample response format (example JSON) |  
 ```
-
 ```
-|
-
+|{
+  "message": "success",
+  "timestamp": 1729504800,
+  "iss_position": {
+    "latitude": "40.7128",
+    "longitude": "-74.0060"
+  }
 ---
 
 ##  Geocoding API (4 marks)
@@ -40,36 +44,53 @@ This investigation sheet helps you gather key technical information from the thr
 | Criteria | Details |
 |---------|---------|
 | Provider used (Choose one) | **LocationIQ / Mapbox/ OpenWeatherMap other -provide detail** |
-| API Base URL | `_______________________________` |
-| Endpoint for geocoding | `_______________________________` |
-| Endpoint for reverse geocoding | `_______________________________` |
-| Authentication method | `_______________________________` |
-| Required query parameters | `_______________________________` |
-| Sample request with latitude/longitude | `_______________________________` |
+| API Base URL | `https://api.openweathermap.org/geo/1.0` |
+| Endpoint for geocoding | `/driect` |
+| Endpoint for reverse geocoding | `/reverse` |
+| Authentication method | `API KEY` |
+| Required query parameters | `Geocoding: q, appid; Reverse geocoding: lat, lon, appid. Optional: limit` |
+| Sample request with latitude/longitude | `GET https://api.openweathermap.org/geo/1.0/reverse?lat=51.5074&lon=-0.1278&limit=1&appid=YOUR_API_KEY` |
 | Sample JSON response (formatted example) |  
 ```
-
 ```
-|
-
+|{
+    "name": "London",
+    "local_names": {
+      "en": "London"
+    },
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "country": "GB"
+  }
 ---
-
 
 ##  Weather API (3 marks)
 
 | Criteria | Details |
 |---------|---------|
 | API Provider (Choose one) | **OpenWeather, OpenWeatherMap (or other – provide details)** |
-| API Base URL | `_______________________________` |
-| Endpoint for current weather | `_______________________________` |
-| Authentication method | `_______________________________` |
-| Required query parameters | `_______________________________` |
+| API Base URL | `https://api:openweathermap.org/data/2.5` |
+| Endpoint for current weather | `/weather` |
+| Authentication method | `API KEY` |
+| Required query parameters | `q(city name), appid (API key), Optional:units=metric` |
 | Sample JSON response (formatted example) |  
 ```
-
 ```
-|
-
+|{
+  "name": "London",
+  "main": {
+    "temp": 15.5,
+    "humidity": 75,
+    "feels_like": 14.2
+  },
+  "weather": [
+    {
+      "main": "clouds",
+    }
+    "wind": {
+      "speed": 4.2
+    }
+  }
 ---
 
 ##  Epoch to Human Time Conversion (Python time module) (2 marks)
