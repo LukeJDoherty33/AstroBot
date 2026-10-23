@@ -113,22 +113,30 @@ def get_weather(city, api_key):
     location = get_city_coordinates(city, api_key)
 
     if not location:
-        return #complete the return statement to indicate that the city was not found
+        return "city not found."
 
-    url = #complete the URL to fetch weather data from OpenWeatherMap API
-    params = #complete the params dictionary to include the latitude, longitude, units as metric, and the API key
+    url = "https://api.openweathermap.org/data/2.5/weather"
+    params = {
+        "lat": location["lat"],
+        "lon": location["lon"],
+        "units": "metric",
+        "appid": api_key
+    }
 
-    response = requests.#complete(url, params=params)
+    response = requests.get(url, params=params)
 
     if response.status_code != 200:
-        return #complete the return statement to indicate that the wheather weather data retrieved or not
+        return "Weather data not retrieved
 
     weather = response.json()
 
     return (
-        #complete the return statement to format and return the weather information such as including city name, country, temperature, weather description, humidity, and wind speed
+        f"Weather in {location['name']}, {location['country']}:\n"
+        f"Temperature: {weather['main']['temp']}°C\n"
+        f"Conditions: {weather['weather'][0]['description']}\n"
+        f"Humidity: {weather['main']['humidity']}%\n"
+        f"Wind speed: {weather['wind']['speed']} m/s"
     )
-
 # =========================
 # ISS FUNCTIONS
 # =========================
