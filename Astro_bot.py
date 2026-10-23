@@ -222,7 +222,7 @@ def main():
                     "/weather <city>\n/iss\n/help\n/quit"
                 )
 
-            elif message_text.lower().startswith("/"):
+            elif message_text.lower().startswith("/weather"):
 
                 parts = message_text.split(maxsplit=1)
 
@@ -232,7 +232,7 @@ def main():
                     city = parts[1]
                     send_message(token, room_id, get_weather(city, weather_key))
 
-            elif message_text.lower() == "#complete":
+            elif message_text.lower() == "/iss":
                 send_message(token, room_id, get_iss_location(weather_key))
 
             elif message_text.lower() == "#complete":
