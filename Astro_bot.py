@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 # =========================
 # CONFIGURATION FUNCTIONS
 # =========================
+
 def get_webex_token():
     choice = input("Use hard-coded Webex token? (y/n): ").lower()
     if choice == "n":
@@ -26,7 +27,12 @@ def get_webex_token():
 
 def get_api_key(prompt, hardcoded_key):
   #complete the function to get the API key from user input or use a hardcoded key
-
+    choice = input(f"Use hard-coded {prompt}? (y/n): ").lower()
+    if choice == "n":
+        api_key = input(f"Enter your {prompt}: ")
+        return api_key
+    else:
+        return hardcoded_key
 # =========================
 # WEBEX FUNCTIONS
 # =========================
